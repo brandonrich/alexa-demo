@@ -28,6 +28,21 @@ const HelloWorldIntentHandler = {
             .getResponse();
     }
 };
+
+const DrinkOrderIntent = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            && handlerInput.requestEnvelope.request.intent.name === 'DrinkOrderIntent';
+    },
+    handle(handlerInput) {
+        const speechText = "I'll get right on that drink for you!";
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
