@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Welcome to this cool app"
+        const speechText = 'Welcome to this cool app";
         return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(speechText)
