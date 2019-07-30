@@ -1,0 +1,19 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:047016415448:function:b0ec24b0-f6dc-400d-89ba-de3958931625:Release_0"
+        },
+        "interfaces": []
+      }
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Clone Me"
+        }
+      }
+    }
+  }
+}

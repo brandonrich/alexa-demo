@@ -1,0 +1,86 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "clone me",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "DrinkOrderIntent",
+          "slots": [
+            {
+              "name": "drink",
+              "type": "AMAZON.Drink"
+            }
+          ],
+          "samples": [
+            "i'd like a {drink}",
+            "get me a {drink}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "DrinkOrderIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "drink",
+              "type": "AMAZON.Drink",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.705644760783.840581772619"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.705644760783.840581772619",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what drink would you like?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "2"
+}
